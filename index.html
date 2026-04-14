@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank | Digital Banking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="login-page" class="login-container">
+        <div class="login-card">
+            <i class="fas fa-university icon-main"></i>
+            <h2>Secure Login</h2>
+            <input type="text" id="username" placeholder="Full Name">
+            <input type="password" id="password" placeholder="PIN (1234)">
+            <button class="login-btn" onclick="handleLogin()">Sign In</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="main-wrapper" style="display: none;">
+        <div class="sidebar">
+            <h2>SecureBank</h2>
+            <ul>
+                <li id="tab-overview" class="active" onclick="switchTab('overview')"><i class="fas fa-th-large"></i> Overview</li>
+                <li id="tab-transactions" onclick="switchTab('transactions')"><i class="fas fa-exchange-alt"></i> Transactions</li>
+                <li id="tab-cards" onclick="switchTab('cards')"><i class="fas fa-credit-card"></i> My Cards</li>
+                <li id="tab-settings" onclick="switchTab('settings')"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1 id="welcome-msg">Welcome</h1>
+                <button class="logout-btn" onclick="location.reload()">Sign Out</button>
+            </header>
+
+            <div id="section-overview" class="tab-content">
+                <div class="dashboard-grid">
+                    <div class="card balance-card">
+                        <h4 id="display-name" class="holder-name">HOLDER: USER</h4>
+                        <p>Total Balance</p>
+                        <h1 id="balance">₹1,000.00</h1>
+                    </div>
+                    <div class="card action-card">
+                        <h3>Quick Transfer</h3>
+                        <input type="number" id="amount" placeholder="Enter Amount (₹)">
+                        <div class="btns">
+                            <button class="dep" onclick="deposit()">Deposit</button>
+                            <button class="wit" onclick="withdraw()">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section-transactions" class="tab-content" style="display:none;">
+                <div class="card full-card">
+                    <h3>Transaction History</h3>
+                    <ul id="history"></ul>
+                </div>
+            </div>
+
+            <div id="section-cards" class="tab-content" style="display:none;">
+                <div class="visa-card">
+                    <div class="card-top"><i class="fas fa-microchip"></i><i class="fab fa-cc-visa"></i></div>
+                    <div class="card-num">**** **** **** 4567</div>
+                    <div class="card-name" id="card-holder-name">USER NAME</div>
+                </div>
+            </div>
+
+            <div id="section-settings" class="tab-content" style="display:none;">
+                <div class="card">
+                    <h3>Account Settings</h3>
+                    <p>Change PIN, Update Profile, or Manage Security.</p>
+                    <button class="logout-btn" style="margin-top:20px;">Update Profile</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

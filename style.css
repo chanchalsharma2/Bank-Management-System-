@@ -1,0 +1,102 @@
+/* --- Global Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a; /* Deep Space Blue */
+    color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* --- Login Page Styling --- */
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1e293b 0%, #0f172a 100%);
+}
+
+.login-card {
+    background: #1e293b;
+    padding: 45px;
+    border-radius: 24px;
+    text-align: center;
+    width: 380px;
+    border: 1px solid #334155;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+.icon-main {
+    font-size: 45px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 12px;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #0f172a;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 280px;
+    background: #1e293b;
+    padding: 40px 24px;
+    border-right: 1px solid #334155;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar h2 {
+    color: #38bdf8;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 16px;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.sidebar li i {
+    margin-right: 12px;
